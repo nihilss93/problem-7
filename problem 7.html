@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Paragraph</title>
+</head>
+<body>
+    <h1>Toggle Paragraph</h1>
+
+    <button id="toggleButton">Toggle Text</button>
+
+    <p id="toggleParagraph" style="display: none;">This paragraph is hidden untill you click toggle text button</p>
+
+    <script>
+        // Get the button and paragraph elements
+        var toggleButton = document.getElementById("toggleButton");
+        var toggleParagraph = document.getElementById("toggleParagraph");
+
+        // Function to toggle the paragraph visibility
+        function toggleParagraphVisibility() {
+            if (toggleParagraph.style.display === "none") {
+                toggleParagraph.style.display = "block";
+            } else {
+                toggleParagraph.style.display = "none";
+            }
+        }
+
+        // using the function to the button click event using eventlistener
+        toggleButton.addEventListener("click", toggleParagraphVisibility);
+    </script>
+</body>
+</html>
